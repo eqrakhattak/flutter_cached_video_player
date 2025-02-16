@@ -27,6 +27,9 @@ project.getTasks().withType(JavaCompile){
 apply plugin: 'com.android.library'
 
 android {
+    if (project.android.hasProperty("namespace")) {
+        namespace "com.lazyarts.vikram.cached_video_player"
+    }
     compileSdkVersion 29
 
     defaultConfig {
